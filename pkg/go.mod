@@ -1,4 +1,4 @@
-module github.com/w-worw/tpp.git
+module github.com/w-worw/tpp
 
 go 1.23.7
 

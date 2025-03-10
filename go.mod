@@ -1,4 +1,4 @@
-module github.com/
+module ad
 
 go 1.23
 
