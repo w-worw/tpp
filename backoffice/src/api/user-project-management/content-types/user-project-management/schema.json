@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_project_managements",
+  "info": {
+    "singularName": "user-project-management",
+    "pluralName": "user-project-managements",
+    "displayName": "User Project Management",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "user_project_management"
+    },
+    "project": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project.project"
+    },
+    "wallet": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

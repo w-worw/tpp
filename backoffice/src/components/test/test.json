@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_test_tests",
+  "info": {
+    "displayName": "test",
+    "icon": "calendar"
+  },
+  "options": {},
+  "attributes": {
+    "mail": {
+      "type": "email"
+    }
+  }
+}

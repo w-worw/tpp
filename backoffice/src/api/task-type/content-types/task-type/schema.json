@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "task_types",
+  "info": {
+    "singularName": "task-type",
+    "pluralName": "task-types",
+    "displayName": "Task Type",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "description": {
+      "type": "text",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "project_tasks": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::project-task.project-task",
+      "mappedBy": "task_type"
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "singularName": "project",
+    "pluralName": "projects",
+    "displayName": "Project",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "cover_image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "project_description": {
+      "type": "text"
+    },
+    "project_status": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::project-status.project-status"
+    },
+    "raise_funds_usd": {
+      "type": "biginteger"
+    },
+    "valuation_usd": {
+      "type": "biginteger"
+    },
+    "start_date": {
+      "type": "date"
+    },
+    "activity_types": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::activity-type.activity-type",
+      "mappedBy": "project"
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "official_website": {
+      "type": "string"
+    },
+    "official_x": {
+      "type": "string"
+    },
+    "official_telegram": {
+      "type": "string"
+    },
+    "project_logo": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "total_estimated_time_minute": {
+      "type": "integer"
+    },
+    "total_estimated_cost_usd": {
+      "type": "integer"
+    },
+    "total_actual_cost_usd": {
+      "type": "integer"
+    }
+  }
+}

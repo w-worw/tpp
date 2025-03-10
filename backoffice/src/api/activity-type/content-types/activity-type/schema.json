@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "activity_types",
+  "info": {
+    "singularName": "activity-type",
+    "pluralName": "activity-types",
+    "displayName": "Activity Type",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "project": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::project.project",
+      "inversedBy": "activity_types"
+    }
+  }
+}
